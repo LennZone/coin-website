@@ -128,9 +128,17 @@ main p {
 body button {
     padding-block: 1rem;
     width: 100%;
+    max-width: 250px;
+    max-height: auto;
+    display: block;
+    margin-inline: auto;
     border-radius: 1000rem;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+@media screen and (min-width: 1000px) {
+
 }
 
 body button:hover {
