@@ -1,0 +1,152 @@
+:root {
+    --main-color-white: #ffffff;
+    --main-color-red: #b22234;
+    --main-color-blue: #3c3b6e;
+    --secondary-color-gray: #464646;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.layout > header {
+    background-color: var(--main-color-blue);
+}
+
+.layout {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.container {
+    width: 80% !important;
+    max-width: 1300px;
+    margin-inline: auto;
+}
+
+/*hamburger*/
+.menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+}
+
+.line {
+    fill: none;
+    stroke: white;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+}
+
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+}
+
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+#navbar-menu {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+    background-color: var(--main-color-blue);
+    color: var(--main-color-white);
+}
+
+#navbar-menu.navbar-menu-open {
+    grid-template-rows: 1fr;
+}
+
+/*main*/
+section:nth-child(2n-1) {
+    background-color: var(--main-color-red);
+    color: var(--main-color-white);
+}
+section:nth-child(2n-1) button.secondary-button {
+    box-shadow: inset 0 0 0 3px var(--main-color-white);
+}
+
+section:nth-child(2n) {
+    background-color: var(--main-color-white);
+    color: var(--main-color-red);
+}
+
+section {
+    padding-block: 2rem;
+}
+
+main h1 {
+    margin-bottom: 2rem;
+}
+
+main h2 {
+    margin-bottom: 1rem;
+}
+
+main p {
+    text-align: justify;
+}
+
+/*buttons*/
+body button {
+    padding-block: 1rem;
+    width: 100%;
+    border-radius: 1000rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+body button:hover {
+    opacity: 0.9;
+}
+
+body button:active {
+    transform: translateY(2px);
+}
+
+button.secondary-button {
+    background-color: var(--main-color-red);
+    color: var(--main-color-white);
+}
+button.primary-button {
+    background-color: var(--main-color-blue);
+    color: var(--main-color-white);
+}
+
+/*footer*/
+.layout > footer {
+    background-color: var(--secondary-color-gray);
+    color: var(--main-color-white);
+}

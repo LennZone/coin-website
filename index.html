@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="layout">
+    <header>
+        <div class="my-4">
+            <div class="container flex justify-between">
+                <div>
+                    <img src="https://placehold.co/150x50" alt="LOGO">
+                </div>
+                <div>
+                    <div class="relative aspect-square" style="width: 50px;">
+                        <div class="z-30 absolute" style="z-index: 100!important;">
+                            <button aria-label="Main Menu" class="menu p-0 m-0 active:transform-none" id="hamburger"
+                                    onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened')); toggleNavMenu();"
+                                    aria-expanded="true">
+                                <svg viewBox="0 0 100 100" width="50">
+                                    <path class="line line1"
+                                          d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path>
+                                    <path class="line line2" d="M 20,50 H 80"></path>
+                                    <path class="line line3"
+                                          d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container relative">
+            <div class="absolute w-full "
+                 id="navbar-menu">
+                <div class="overflow-hidden">
+                    <ul class="px-8 py-4 space-y-4 border-t">
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Vision</a></li>
+                        <li><a href="">Tokenomincs</a></li>
+                        <li><a href="">Team</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="">
+            <div class="container">
+                <header>
+                    <h1 class="font-black text-4xl uppercase">
+                        a beautiful headline
+                    </h1>
+                </header>
+                <main>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eaque libero numquam provident tempora! A adipisci aspernatur, beatae culpa debitis earum error et eveniet ex excepturi hic in ipsa ipsam magni nisi odio officia omnis quae, quis sapiente sed voluptatem voluptatum. Ad at eum exercitationem iure totam! Architecto doloremque eum incidunt ipsam laudantium, maiores maxime neque quas quia voluptate? Accusamus aperiam debitis expedita neque quo! Consectetur impedit laboriosam ullam. Accusantium dolor dolore eos expedita hic ipsam nostrum, officiis, perspiciatis placeat quaerat ratione reiciendis repellendus repudiandae tempora temporibus ullam vero! Accusantium animi eligendi eos explicabo fugiat impedit laudantium molestiae natus unde?
+                        </p>
+                    </div>
+                </main>
+            </div>
+        </section>
+        <section id="overview">
+            <div class="container">
+                <header>
+                    <h2 class="font-semibold text-2xl uppercase">
+                        an overview second headline
+                    </h2>
+                </header>
+                <main>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eaque libero numquam provident tempora! A adipisci aspernatur, beatae culpa debitis earum error et eveniet ex excepturi hic in ipsa ipsam magni nisi odio officia omnis quae, quis sapiente sed voluptatem voluptatum. Ad at eum exercitationem iure totam! Architecto doloremque eum incidunt ipsam laudantium, maiores maxime neque quas quia voluptate? Accusamus aperiam debitis expedita neque quo! Consectetur impedit laboriosam ullam. Accusantium dolor dolore eos expedita hic ipsam nostrum, officiis, perspiciatis placeat quaerat ratione reiciendis repellendus repudiandae tempora temporibus ullam vero! Accusantium animi eligendi eos explicabo fugiat impedit laudantium molestiae natus unde?
+                        </p>
+                        <button class="primary-button | mt-4">
+                            button
+                        </button>
+                    </div>
+                </main>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            FOOTER
+        </div>
+    </footer>
+</div>
+</body>
+</html>
