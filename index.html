@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="layout">
-    <header>
+    <header class="sticky top-0">
         <div class="my-4">
             <div class="container flex justify-between">
                 <div>
@@ -62,23 +62,28 @@
         <section id="">
             <div class="container">
                 <header>
-                    <h1 class="font-black text-4xl uppercase">
+                    <h1 class="font-black text-4xl uppercase mt-12">
                         a beautiful headline
                     </h1>
                 </header>
                 <main>
+                    <button class="primary-button | mt-4">
+                        button
+                    </button>
                     <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eaque libero numquam
-                            provident tempora! A adipisci aspernatur, beatae culpa debitis earum error et eveniet ex
-                            excepturi hic in ipsa ipsam magni nisi odio officia omnis quae, quis sapiente sed voluptatem
-                            voluptatum. Ad at eum exercitationem iure totam! Architecto doloremque eum incidunt ipsam
-                            laudantium, maiores maxime neque quas quia voluptate? Accusamus aperiam debitis expedita
-                            neque quo! Consectetur impedit laboriosam ullam. Accusantium dolor dolore eos expedita hic
-                            ipsam nostrum, officiis, perspiciatis placeat quaerat ratione reiciendis repellendus
-                            repudiandae tempora temporibus ullam vero! Accusantium animi eligendi eos explicabo fugiat
-                            impedit laudantium molestiae natus unde?
-                        </p>
+                        <img src="https://placehold.co/250x300" alt="image" class="mt-8 mx-auto w-fit">
+                    </div>
+                </main>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <main>
+                    <div class="space-y-4">
+                        <img src="https://placehold.co/250x75" alt="image" class="mx-auto w-fit">
+                        <img src="https://placehold.co/250x75" alt="image" class="mx-auto w-fit">
+                        <img src="https://placehold.co/250x75" alt="image" class="mx-auto w-fit">
+                        <img src="https://placehold.co/250x75" alt="image" class="mx-auto w-fit">
                     </div>
                 </main>
             </div>
@@ -86,26 +91,25 @@
         <section id="Overview">
             <div class="container">
                 <header>
-                    <h2 class="font-semibold text-3xl uppercase">
+                    <h2 class="font-extrabold text-3xl uppercase">
                         an overview second headline
                     </h2>
                 </header>
                 <main>
-                    <div>
+                    <div class="space-y-4">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eaque libero numquam
-                            provident tempora! A adipisci aspernatur, beatae culpa debitis earum error et eveniet ex
-                            excepturi hic in ipsa ipsam magni nisi odio officia omnis quae, quis sapiente sed voluptatem
-                            voluptatum. Ad at eum exercitationem iure totam! Architecto doloremque eum incidunt ipsam
-                            laudantium, maiores maxime neque quas quia voluptate? Accusamus aperiam debitis expedita
-                            neque quo! Consectetur impedit laboriosam ullam. Accusantium dolor dolore eos expedita hic
-                            ipsam nostrum, officiis, perspiciatis placeat quaerat ratione reiciendis repellendus
-                            repudiandae tempora temporibus ullam vero! Accusantium animi eligendi eos explicabo fugiat
-                            impedit laudantium molestiae natus unde?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequuntur culpa debitis
+                            dolorem exercitationem harum itaque maiores minus nisi optio possimus, quae quia, voluptas.
+                            Autem ea fuga hic in odio quaerat quia tempore, temporibus. Eius illo inventore officia
+                            suscipit ut. Amet, expedita laudantium magni maxime molestias nisi nobis optio ullam!
                         </p>
-                        <button class="primary-button | mt-4">
+                        <h3 class="font-extrabold text-3xl uppercase">
+                            an overview second headline
+                        </h3>
+                        <button class="primary-button">
                             button
                         </button>
+
                     </div>
                 </main>
             </div>
@@ -118,11 +122,14 @@
                     </h2>
                 </header>
                 <main>
-                    <div>
+                    <div class="space-y-4">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci distinctio et id maxime
-                            modi ratione unde! Architecto assumenda culpa esse facere hic laboriosam mollitia nisi nobis
-                            repellendus. Dolor hic nemo nulla quis quisquam quod ratione repellendus reprehenderit sequi
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci distinctio et id
+                            maxime
+                            modi ratione unde! Architecto assumenda culpa esse facere hic laboriosam mollitia nisi
+                            nobis
+                            repellendus. Dolor hic nemo nulla quis quisquam quod ratione repellendus reprehenderit
+                            sequi
                             temporibus. Consectetur.
                         </p>
                         <button class="primary-button | mt-4">
@@ -131,54 +138,125 @@
                         <button class="secondary-button | mt-4">
                             button
                         </button>
-                    </div>
-                    <div class="mt-4">
                         <div>
                             <canvas id="myChart"></canvas>
-                        </div>
+                            <script>
+                                const ctx = document.getElementById('myChart');
 
-                        <script>
-                            const ctx = document.getElementById('myChart');
-
-                            new Chart(ctx, {
-                                type: 'pie',
-                                data: {
-                                    labels: ["back in pool", "marketing", "airdrop", "team", "reserves",],
-                                    datasets: [
-                                        {
-                                            data: [60, 5, 5, 25, 5,],
-                                            //backgroundColor: ['rgba(178,34,52,1)', 'rgba(60,59,110,1)', 'rgba(178,34,52,1)', 'rgba(60,59,110,1)', 'rgba(189,195,199,1)',],
-                                            //borderColor: ['rgba(0,0,0,0)', 'rgba(170,170,170,0)', 'rgba(156,89,182,0)', 'rgba(241,196,15,0)', 'rgba(189,195,199,1)',],
-                                            label: ""
-                                        }
-                                    ]
-                                },
-                                options: {
-                                    plugins: {
-                                        customCanvasBackgroundColor: {
-                                            color: 'transparent',
-                                        },
-                                        legend: {
-                                            display: true,
-                                            labels: {
-                                                color: '#ffffff',
-                                                font: 'Roboto',
+                                new Chart(ctx, {
+                                    type: 'pie',
+                                    data: {
+                                        labels: ["back in pool", "marketing", "airdrop", "team", "reserves",],
+                                        datasets: [
+                                            {
+                                                data: [60, 5, 5, 25, 5,],
+                                                //backgroundColor: ['rgba(178,34,52,1)', 'rgba(60,59,110,1)', 'rgba(178,34,52,1)', 'rgba(60,59,110,1)', 'rgba(189,195,199,1)',],
+                                                //borderColor: ['rgba(0,0,0,0)', 'rgba(170,170,170,0)', 'rgba(156,89,182,0)', 'rgba(241,196,15,0)', 'rgba(189,195,199,1)',],
+                                                label: ""
                                             }
-                                        },
-                                        colors: {
-                                            enabled: true
-                                        },
-                                        datalabels: {
-                                            display: true,
-                                            font: {
-                                                style: ' bold',
-                                                family: 'Roboto',
+                                        ]
+                                    },
+                                    options: {
+                                        plugins: {
+                                            customCanvasBackgroundColor: {
+                                                color: 'transparent',
+                                            },
+                                            legend: {
+                                                display: true,
+                                                labels: {
+                                                    color: '#3c3b6e',
+                                                    font: 'Roboto',
+                                                }
+                                            },
+                                            colors: {
+                                                enabled: true
+                                            },
+                                            datalabels: {
+                                                display: true,
+                                                font: {
+                                                    style: ' bold',
+                                                    family: 'Roboto',
+                                                },
                                             },
                                         },
                                     },
-                                },
-                            });
-                        </script>
+                                });
+                            </script>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="font-extrabold text-3xl uppercase mt-20 mb-12">
+                                another cool headline
+                            </h3>
+                            <ul class="space-y-12 text-center">
+                                <li>
+                                    <span class="text-7xl font-bold">
+                                        60%
+                                    </span>
+                                    <h4 class="uppercase font-bold">
+                                        some data
+                                    </h4>
+                                </li>
+                                <li>
+                                    <span class="text-7xl font-bold">
+                                        60%
+                                    </span>
+                                    <h4 class="uppercase font-bold">
+                                        some data
+                                    </h4>
+                                </li>
+                                <li>
+                                    <span class="text-7xl font-bold">
+                                        60%
+                                    </span>
+                                    <h4 class="uppercase font-bold">
+                                        some data
+                                    </h4>
+                                </li>
+                                <li>
+                                    <span class="text-7xl font-bold">
+                                        60%
+                                    </span>
+                                    <h4 class="uppercase font-bold">
+                                        some data
+                                    </h4>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <main>
+                    <div class="space-y-4">
+                        <img src="https://placehold.co/250x250" alt="image" class="mx-auto w-fit border-8"
+                             style="border-color: var(--main-color-blue)">
+                        <img src="https://placehold.co/250x250" alt="image" class="mx-auto w-fit border-8"
+                             style="border-color: var(--main-color-blue)">
+                        <img src="https://placehold.co/250x250" alt="image" class="mx-auto w-fit border-8"
+                             style="border-color: var(--main-color-blue)">
+                        <img src="https://placehold.co/250x250" alt="image" class="mx-auto w-fit border-8"
+                             style="border-color: var(--main-color-blue)">
+                        <img src="https://placehold.co/250x250" alt="image" class="mx-auto w-fit border-8"
+                             style="border-color: var(--main-color-blue)">
+                        <div>
+                            <button class="primary-button | mt-4">
+                                button
+                            </button>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <main>
+                    <div class="space-y-4">
+                        <img src="https://placehold.co/250x75" alt="image" class="mx-auto w-fit">
+                        <img src="https://placehold.co/250x75" alt="image" class="mx-auto w-fit">
+                        <img src="https://placehold.co/250x75" alt="image" class="mx-auto w-fit">
+                        <img src="https://placehold.co/250x75" alt="image" class="mx-auto w-fit">
                     </div>
                 </main>
             </div>
