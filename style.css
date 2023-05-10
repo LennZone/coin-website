@@ -106,6 +106,7 @@ section:nth-child(2n) {
 
 section {
     padding-block: 2rem;
+    scroll-margin-top: 6.5rem;
 }
 
 main h2, h3 {
