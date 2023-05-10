@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
 <div class="layout">
@@ -45,10 +47,10 @@
                  id="navbar-menu">
                 <div class="overflow-hidden">
                     <ul class="px-8 py-4 space-y-4 border-t">
-                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#Overview">Overview</a></li>
                         <li><a href="">About</a></li>
                         <li><a href="">Vision</a></li>
-                        <li><a href="">Tokenomincs</a></li>
+                        <li><a href="#Tokenomincs">Tokenomincs</a></li>
                         <li><a href="">Team</a></li>
                         <li><a href="">Contact Us</a></li>
                     </ul>
@@ -67,13 +69,21 @@
                 <main>
                     <div>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eaque libero numquam provident tempora! A adipisci aspernatur, beatae culpa debitis earum error et eveniet ex excepturi hic in ipsa ipsam magni nisi odio officia omnis quae, quis sapiente sed voluptatem voluptatum. Ad at eum exercitationem iure totam! Architecto doloremque eum incidunt ipsam laudantium, maiores maxime neque quas quia voluptate? Accusamus aperiam debitis expedita neque quo! Consectetur impedit laboriosam ullam. Accusantium dolor dolore eos expedita hic ipsam nostrum, officiis, perspiciatis placeat quaerat ratione reiciendis repellendus repudiandae tempora temporibus ullam vero! Accusantium animi eligendi eos explicabo fugiat impedit laudantium molestiae natus unde?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eaque libero numquam
+                            provident tempora! A adipisci aspernatur, beatae culpa debitis earum error et eveniet ex
+                            excepturi hic in ipsa ipsam magni nisi odio officia omnis quae, quis sapiente sed voluptatem
+                            voluptatum. Ad at eum exercitationem iure totam! Architecto doloremque eum incidunt ipsam
+                            laudantium, maiores maxime neque quas quia voluptate? Accusamus aperiam debitis expedita
+                            neque quo! Consectetur impedit laboriosam ullam. Accusantium dolor dolore eos expedita hic
+                            ipsam nostrum, officiis, perspiciatis placeat quaerat ratione reiciendis repellendus
+                            repudiandae tempora temporibus ullam vero! Accusantium animi eligendi eos explicabo fugiat
+                            impedit laudantium molestiae natus unde?
                         </p>
                     </div>
                 </main>
             </div>
         </section>
-        <section id="overview">
+        <section id="Overview">
             <div class="container">
                 <header>
                     <h2 class="font-semibold text-3xl uppercase">
@@ -83,11 +93,92 @@
                 <main>
                     <div>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eaque libero numquam provident tempora! A adipisci aspernatur, beatae culpa debitis earum error et eveniet ex excepturi hic in ipsa ipsam magni nisi odio officia omnis quae, quis sapiente sed voluptatem voluptatum. Ad at eum exercitationem iure totam! Architecto doloremque eum incidunt ipsam laudantium, maiores maxime neque quas quia voluptate? Accusamus aperiam debitis expedita neque quo! Consectetur impedit laboriosam ullam. Accusantium dolor dolore eos expedita hic ipsam nostrum, officiis, perspiciatis placeat quaerat ratione reiciendis repellendus repudiandae tempora temporibus ullam vero! Accusantium animi eligendi eos explicabo fugiat impedit laudantium molestiae natus unde?
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eaque libero numquam
+                            provident tempora! A adipisci aspernatur, beatae culpa debitis earum error et eveniet ex
+                            excepturi hic in ipsa ipsam magni nisi odio officia omnis quae, quis sapiente sed voluptatem
+                            voluptatum. Ad at eum exercitationem iure totam! Architecto doloremque eum incidunt ipsam
+                            laudantium, maiores maxime neque quas quia voluptate? Accusamus aperiam debitis expedita
+                            neque quo! Consectetur impedit laboriosam ullam. Accusantium dolor dolore eos expedita hic
+                            ipsam nostrum, officiis, perspiciatis placeat quaerat ratione reiciendis repellendus
+                            repudiandae tempora temporibus ullam vero! Accusantium animi eligendi eos explicabo fugiat
+                            impedit laudantium molestiae natus unde?
                         </p>
                         <button class="primary-button | mt-4">
                             button
                         </button>
+                    </div>
+                </main>
+            </div>
+        </section>
+        <section id="Tokenomincs">
+            <div class="container">
+                <header>
+                    <h2 class="font-semibold text-3xl uppercase">
+                        Tokenomincs
+                    </h2>
+                </header>
+                <main>
+                    <div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci distinctio et id maxime
+                            modi ratione unde! Architecto assumenda culpa esse facere hic laboriosam mollitia nisi nobis
+                            repellendus. Dolor hic nemo nulla quis quisquam quod ratione repellendus reprehenderit sequi
+                            temporibus. Consectetur.
+                        </p>
+                        <button class="primary-button | mt-4">
+                            button
+                        </button>
+                        <button class="secondary-button | mt-4">
+                            button
+                        </button>
+                    </div>
+                    <div class="mt-4">
+                        <div>
+                            <canvas id="myChart"></canvas>
+                        </div>
+
+                        <script>
+                            const ctx = document.getElementById('myChart');
+
+                            new Chart(ctx, {
+                                type: 'pie',
+                                data: {
+                                    labels: ["back in pool", "marketing", "airdrop", "team", "reserves",],
+                                    datasets: [
+                                        {
+                                            data: [60, 5, 5, 25, 5,],
+                                            //backgroundColor: ['rgba(178,34,52,1)', 'rgba(60,59,110,1)', 'rgba(178,34,52,1)', 'rgba(60,59,110,1)', 'rgba(189,195,199,1)',],
+                                            //borderColor: ['rgba(0,0,0,0)', 'rgba(170,170,170,0)', 'rgba(156,89,182,0)', 'rgba(241,196,15,0)', 'rgba(189,195,199,1)',],
+                                            label: ""
+                                        }
+                                    ]
+                                },
+                                options: {
+                                    plugins: {
+                                        customCanvasBackgroundColor: {
+                                            color: 'transparent',
+                                        },
+                                        legend: {
+                                            display: true,
+                                            labels: {
+                                                color: '#ffffff',
+                                                font: 'Roboto',
+                                            }
+                                        },
+                                        colors: {
+                                            enabled: true
+                                        },
+                                        datalabels: {
+                                            display: true,
+                                            font: {
+                                                style: ' bold',
+                                                family: 'Roboto',
+                                            },
+                                        },
+                                    },
+                                },
+                            });
+                        </script>
                     </div>
                 </main>
             </div>
