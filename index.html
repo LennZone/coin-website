@@ -123,7 +123,7 @@
         <section id="Tokenomincs">
             <div class="container">
                 <div class="space-y-4 lg:space-y-0 lg:grid grid-cols-2 gap-4 items-center">
-                    <div class="md:flex gap-8 justify-between items-center">
+                    <div class="md:flex lg:block gap-8 justify-between items-center">
                         <div>
                             <h2 class="font-semibold text-3xl uppercase">
                                 Tokenomincs
@@ -135,7 +135,7 @@
                         </div>
 
                         <a href="https://t.me/WhiteHouse1792" target="_blank"
-                           class="mt-4 md:mt-0 lg:my-auto col-start-1 row-start-2 shrink-0 block">
+                           class="mt-4 md:mt-0 lg:my-auto lg:mt-4 col-start-1 row-start-2 shrink-0 block">
                             <button class="primary-button | mt-4 md:mt-0 flex gap-4 justify-center content-center items-center px-4">
                                 join our telegram
                                 <svg xmlns="http://www.w3.org/2000/svg" class="relative z-10" viewBox="0 0 496 512"
@@ -157,7 +157,7 @@
                         <img loading="lazy" src="https://placehold.co/230x150" alt="image" class="mx-auto w-fit">
                     </div>
                     <div>
-                        <canvas id="myChart" class="max-h-96"></canvas>
+                        <canvas id="myChart" class="max-h-96 mt-12 lg:mt-0"></canvas>
                         <script>
                             const ctx = document.getElementById('myChart');
 
@@ -180,7 +180,7 @@
                                             color: 'transparent',
                                         },
                                         legend: {
-                                            display: true,
+                                            display: false,
                                             labels: {
                                                 color: '#ffffff',
                                                 font: 'Roboto',
@@ -202,7 +202,7 @@
                         </script>
                     </div>
                     <div class="space-y-4 col-span-2">
-                        <h3 class="font-extrabold text-3xl uppercase mt-20 mb-12">
+                        <h3 class="font-extrabold text-3xl uppercase mt-20 lg:mt-0 mb-12 lg:mb-4">
                             another cool headline
                         </h3>
                         <ul class="flex flex-wrap gap-8 justify-center">
@@ -254,7 +254,7 @@
         <section>
             <div class="container">
                 <main>
-                    <div class="space-y-4">
+                    <div class="flex flex-wrap gap-8">
                         <img loading="lazy" src="https://placehold.co/250x250" alt="image"
                              class="mx-auto w-fit border-8"
                              style="border-color: var(--main-color-blue)">
@@ -270,11 +270,13 @@
                         <img loading="lazy" src="https://placehold.co/250x250" alt="image"
                              class="mx-auto w-fit border-8"
                              style="border-color: var(--main-color-blue)">
-                        <div>
-                            <button class="primary-button | mt-4">
-                                button
-                            </button>
-                        </div>
+                    </div>
+
+                    <div>
+
+                        <button class="primary-button | mt-12">
+                            button
+                        </button>
                     </div>
                 </main>
             </div>
@@ -282,7 +284,7 @@
         <section>
             <div class="container">
                 <main>
-                    <div class="space-y-4">
+                    <div class="flex flex-wrap gap-4">
                         <img loading="lazy" src="https://placehold.co/250x75" alt="image" class="mx-auto w-fit">
                         <img loading="lazy" src="https://placehold.co/250x75" alt="image" class="mx-auto w-fit">
                         <img loading="lazy" src="https://placehold.co/250x75" alt="image" class="mx-auto w-fit">
