@@ -12,8 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<!--    favicons-->
+    <!--    chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0/dist/chartjs-plugin-datalabels.min.js"></script>
+    <!--    favicons-->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
@@ -22,7 +24,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-<!--    fontawesome-->
+    <!--    fontawesome-->
     <script src="https://kit.fontawesome.com/d1d73ae7a9.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -127,7 +129,7 @@
         </section>
         <section id="Tokenomincs">
             <div class="container">
-                <div class="space-y-4 lg:space-y-0 lg:grid grid-cols-2 gap-4 items-center">
+                <div class="space-y-4 lg:space-y-0 lg:grid grid-cols-2 gap-12 items-center">
                     <div class="md:flex lg:block gap-8 justify-between items-center">
                         <div>
                             <h2 class="font-semibold text-3xl uppercase">
@@ -161,13 +163,16 @@
                         <script>
                             const ctx = document.getElementById('myChart');
 
+                            let data = [60, 5, 5, 25, 5,]
+
                             new Chart(ctx, {
                                 type: 'pie',
+                                plugins: [ChartDataLabels],
                                 data: {
                                     labels: ["back in pool", "marketing", "airdrop", "team", "reserves",],
                                     datasets: [
                                         {
-                                            data: [60, 5, 5, 25, 5,],
+                                            data: data,
                                             //backgroundColor: ['rgba(178,34,52,1)', 'rgba(60,59,110,1)', 'rgba(178,34,52,1)', 'rgba(60,59,110,1)', 'rgba(189,195,199,1)',],
                                             //borderColor: ['rgba(0,0,0,0)', 'rgba(170,170,170,0)', 'rgba(156,89,182,0)', 'rgba(241,196,15,0)', 'rgba(189,195,199,1)',],
                                             label: ""
@@ -180,10 +185,14 @@
                                             color: 'transparent',
                                         },
                                         legend: {
-                                            display: false,
+                                            display: true,
                                             labels: {
-                                                color: '#ffffff',
-                                                font: 'Roboto',
+                                                color: '#000000',
+                                                font: {
+                                                    style: ' bold',
+                                                    family: 'Roboto',
+                                                    size: 18,
+                                                },
                                             }
                                         },
                                         colors: {
@@ -191,9 +200,13 @@
                                         },
                                         datalabels: {
                                             display: true,
+                                            anchor:'center',
+                                            align:'end',
+                                            color: '#000000',
                                             font: {
                                                 style: ' bold',
                                                 family: 'Roboto',
+                                                size: 24,
                                             },
                                         },
                                     },
@@ -207,42 +220,46 @@
                         </h3>
                         <ul class="flex flex-wrap gap-8 justify-center">
                             <li>
-                                    <span class="text-7xl font-bold">
+                                    <span id="back-in-pool"
+                                            class="text-7xl font-bold">
                                         60%
                                     </span>
-                                <h4 class="uppercase font-bold">
+                                <h4 class="uppercase font-bold text-center">
                                     back in pool
                                 </h4>
                             </li>
                             <li>
-                                    <span class="text-7xl font-bold">
+                                    <span id="marketing"
+                                            class="text-7xl font-bold">
                                         5%
                                     </span>
-                                <h4 class="uppercase font-bold">
+                                <h4 class="uppercase font-bold text-center">
                                     marketing
                                 </h4>
                             </li>
                             <li>
-                                    <span class="text-7xl font-bold">
+                                    <span id="airdrop"
+                                            class="text-7xl font-bold">
                                         5%
                                     </span>
-                                <h4 class="uppercase font-bold">
+                                <h4 class="uppercase font-bold text-center">
                                     airdrop
                                 </h4>
                             </li>
                             <li>
-                                    <span class="text-7xl font-bold">
+                                    <span id="team"
+                                            class="text-7xl font-bold">
                                         25%
                                     </span>
-                                <h4 class="uppercase font-bold">
+                                <h4 class="uppercase font-bold text-center">
                                     team
                                 </h4>
                             </li>
                             <li>
-                                    <span class="text-7xl font-bold">
+                                    <span id="reserves" class="text-7xl font-bold">
                                         5%
                                     </span>
-                                <h4 class="uppercase font-bold">
+                                <h4 class="uppercase font-bold text-center">
                                     reserves
                                 </h4>
                             </li>
