@@ -164,12 +164,3 @@ button.primary-button {
     background-color: var(--secondary-color-gray);
     color: var(--main-color-white);
 }
-
-/*stars*/
-.stars {
-    background-image: url( "https://static.vecteezy.com/system/resources/thumbnails/001/189/165/small/star.png");
-    background-size: contain;
-    background-repeat: repeat-x;
-    filter: invert(100%);
-    height: 1rem;
-}
