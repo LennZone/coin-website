@@ -160,59 +160,6 @@
                     </div>
                     <div>
                         <canvas id="myChart" class="max-h-96 mt-12 lg:mt-0"></canvas>
-                        <script>
-                            const ctx = document.getElementById('myChart');
-
-                            let data = [60, 5, 5, 25, 5,]
-
-                            new Chart(ctx, {
-                                type: 'pie',
-                                plugins: [ChartDataLabels],
-                                data: {
-                                    labels: ["back in pool", "marketing", "airdrop", "team", "reserves",],
-                                    datasets: [
-                                        {
-                                            data: data,
-                                            //backgroundColor: ['rgba(178,34,52,1)', 'rgba(60,59,110,1)', 'rgba(178,34,52,1)', 'rgba(60,59,110,1)', 'rgba(189,195,199,1)',],
-                                            //borderColor: ['rgba(0,0,0,0)', 'rgba(170,170,170,0)', 'rgba(156,89,182,0)', 'rgba(241,196,15,0)', 'rgba(189,195,199,1)',],
-                                            label: ""
-                                        }
-                                    ]
-                                },
-                                options: {
-                                    plugins: {
-                                        customCanvasBackgroundColor: {
-                                            color: 'transparent',
-                                        },
-                                        legend: {
-                                            display: true,
-                                            labels: {
-                                                color: '#000000',
-                                                font: {
-                                                    style: ' bold',
-                                                    family: 'Roboto',
-                                                    size: 18,
-                                                },
-                                            }
-                                        },
-                                        colors: {
-                                            enabled: true
-                                        },
-                                        datalabels: {
-                                            display: true,
-                                            anchor:'center',
-                                            align:'end',
-                                            color: '#000000',
-                                            font: {
-                                                style: ' bold',
-                                                family: 'Roboto',
-                                                size: 24,
-                                            },
-                                        },
-                                    },
-                                },
-                            });
-                        </script>
                     </div>
                     <div class="space-y-4 col-span-2">
                         <h3 class="font-extrabold text-3xl uppercase mt-20 lg:mt-0 mb-12 lg:mb-4">
@@ -264,6 +211,78 @@
                                 </h4>
                             </li>
                         </ul>
+                        <script>
+                            const ctx = document.getElementById('myChart');
+                            const backInPool = document.getElementById('back-in-pool')
+                            const marketing = document.getElementById('marketing')
+                            const airdrop = document.getElementById('airdrop')
+                            const team = document.getElementById('team')
+                            const reserves = document.getElementById('reserves')
+
+                            let labelFontBackgroundColor = ['rgb(122, 168, 116)', 'rgb(247, 219, 106)', 'rgb(235, 176, 45)', 'rgb(60, 72, 107)', 'rgb(216, 100, 169)',];
+
+                            backInPool.style.color = labelFontBackgroundColor[0];
+                            marketing.style.color = labelFontBackgroundColor[1];
+                            airdrop.style.color = labelFontBackgroundColor[2];
+                            team.style.color = labelFontBackgroundColor[3];
+                            reserves.style.color = labelFontBackgroundColor[4];
+
+                            let data = [60, 5, 5, 25, 5]
+
+                            backInPool.innerText = data[0] + '%';
+                            marketing.innerText = data[1] + '%';
+                            airdrop.innerText = data[2] + '%';
+                            team.innerText = data[3] + '%';
+                            reserves.innerText = data[4] + '%';
+
+                            new Chart(ctx, {
+                                type: 'pie',
+                                plugins: [ChartDataLabels],
+                                data: {
+                                    labels: ["back in pool", "marketing", "airdrop", "team", "reserves",],
+                                    datasets: [
+                                        {
+                                            data: data,
+                                            backgroundColor: labelFontBackgroundColor,
+                                            //borderColor: ['rgba(0,0,0,0)', 'rgba(170,170,170,0)', 'rgba(156,89,182,0)', 'rgba(241,196,15,0)', 'rgba(189,195,199,1)',],
+                                            label: ""
+                                        }
+                                    ]
+                                },
+                                options: {
+                                    plugins: {
+                                        customCanvasBackgroundColor: {
+                                            color: 'transparent',
+                                        },
+                                        legend: {
+                                            display: true,
+                                            labels: {
+                                                color: '#ffffff',
+                                                font: {
+                                                    style: ' bold',
+                                                    family: 'Roboto',
+                                                    size: 18,
+                                                },
+                                            }
+                                        },
+                                        colors: {
+                                            enabled: true
+                                        },
+                                        datalabels: {
+                                            display: true,
+                                            anchor: 'center',
+                                            align: 'end',
+                                            color: '#ffffff',
+                                            font: {
+                                                style: ' bold',
+                                                family: 'Roboto',
+                                                size: 24,
+                                            },
+                                        },
+                                    },
+                                },
+                            });
+                        </script>
                     </div>
                 </div>
             </div>
